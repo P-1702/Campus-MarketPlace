@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/socal_card.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/googleauth.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -24,7 +26,14 @@ class Body extends StatelessWidget {
                 Center(
                   child: SocalCard(
                     icon: "assets/icons/google-icon.svg",
-                    press: () {},
+                    press: () async {
+                      signInWithGoogle(context);
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),

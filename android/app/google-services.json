@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391361480011",
+    "project_id": "marketplace-7819a",
+    "storage_bucket": "marketplace-7819a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391361480011:android:8dde2f53ed751c284494ce",
+        "android_client_info": {
+          "package_name": "com.example.marketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391361480011-tdb23pbtc1i7duv97oa32afnbf9a9gkt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marketplace",
+            "certificate_hash": "02c432215a2a9a96214bfa0dc144c3bb225e6b99"
+          }
+        },
+        {
+          "client_id": "391361480011-mg7ke9ujmh7n816muv322elvovvcqbh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASgGUXBODMuiJlsBE-A0qLmQNtnteZMUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391361480011-mg7ke9ujmh7n816muv322elvovvcqbh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
