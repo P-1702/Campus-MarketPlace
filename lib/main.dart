@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/Sell%20page/Sellpage_screen.dart';
 import 'package:shop_app/screens/sign_up/sign_up_screen.dart';
 import '/routes.dart';
 

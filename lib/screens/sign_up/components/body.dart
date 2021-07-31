@@ -28,11 +28,6 @@ class Body extends StatelessWidget {
                     icon: "assets/icons/google-icon.svg",
                     press: () async {
                       signInWithGoogle(context);
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
-                        ),
-                      );
                     },
                   ),
                 ),

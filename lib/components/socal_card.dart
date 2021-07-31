@@ -21,14 +21,12 @@ class SocalCard extends StatelessWidget {
       onTap: press,
       child: Container(
         padding: EdgeInsets.all(getProportionateScreenWidth(12)),
-        decoration: BoxDecoration(
-          color: kPrimaryColor,
-        ),
+        color: kPrimaryLightColor,
         child: Row(
           children: [
             Text(
               "Login With Your Bits Email",
-              style: textTheme().bodyText1,
+              style: TextStyle(color: Colors.black),
             ),
             SvgPicture.asset(icon),
           ],
