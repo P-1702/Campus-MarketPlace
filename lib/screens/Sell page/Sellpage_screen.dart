@@ -13,9 +13,10 @@ class _SellPageState extends State<SellPage> {
   String productdesc = "Please enter your product description";
   String dropdownvalue = 'Books';
   String category = "Others";
+  String cost = "";
   var items = ['Books', 'Furnitures', 'Sports', 'Electronics', 'Others'];
   List<Asset> images = <Asset>[];
-  String _error = 'No Error Dectected';
+  String errors = 'No Error Dectected';
   Widget buildGridView() {
     return GridView.count(
       crossAxisCount: 3,
@@ -62,7 +63,7 @@ class _SellPageState extends State<SellPage> {
 
     setState(() {
       images = resultList;
-      _error = error;
+      errors = error;
     });
   }
 
@@ -72,7 +73,15 @@ class _SellPageState extends State<SellPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Sell your products"),
+          title: Row(
+            children: [
+              Text("Sell your products"),
+              ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.save),
+                  label: Text("Save")),
+            ],
+          ),
           centerTitle: true,
         ),
         // backgroundColor: kPrimaryColor,
@@ -91,6 +100,18 @@ class _SellPageState extends State<SellPage> {
                 decoration: InputDecoration(
                   hintText: productname,
                   labelText: "Product name",
+                ),
+              ),
+              SizedBox(height: getProportionateScreenHeight(20)),
+              TextFormField(
+                onChanged: (value) => print(value),
+                onSaved: (value) {
+                  cost = value;
+                  print(cost);
+                },
+                decoration: InputDecoration(
+                  hintText: "Enter a valid price",
+                  labelText: "Price",
                 ),
               ),
               SizedBox(height: getProportionateScreenHeight(20)),
