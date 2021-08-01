@@ -10,7 +10,7 @@ class ProductCard extends StatelessWidget {
   const ProductCard({
     Key key,
     this.width = 140,
-    this.aspectRetio = 100 / 66,
+    this.aspectRetio = 1.5,
     @required this.product,
   }) : super(key: key);
 
@@ -20,6 +20,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: getProportionateScreenHeight(20),
       decoration: BoxDecoration(
           border: Border.all(
         color: Colors.white,
@@ -39,17 +40,19 @@ class ProductCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AspectRatio(
-                aspectRatio: 100 / 66,
-                child: Container(
-                  padding: EdgeInsets.all(getProportionateScreenWidth(1)),
-                  decoration: BoxDecoration(
-                    color: kSecondaryColor.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Hero(
-                    tag: product.id.toString(),
-                    child: Image.asset(product.images[0]),
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1.5,
+                  child: Container(
+                    padding: EdgeInsets.all(getProportionateScreenWidth(1)),
+                    decoration: BoxDecoration(
+                      color: kSecondaryColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Hero(
+                      tag: product.id.toString(),
+                      child: Image.asset(product.images[0]),
+                    ),
                   ),
                 ),
               ),
