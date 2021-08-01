@@ -1,9 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/Sell%20page/Sellpage_screen.dart';
+import 'package:shop_app/screens/sign_up/sign_up_screen.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import '/routes.dart';
-import '/screens/splash/splash_screen.dart';
+
 import 'theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -15,9 +21,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: theme(),
-      // home: SplashScreen(),
+      home: HomeScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: SplashScreen.routeName,
+      // initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }

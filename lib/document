@@ -1,0 +1,9 @@
+//Baackend structure of our document
+Doc={
+"Books"=[list<product>];//to be called in books tab
+"Furnitures"=[list<product>];//to be called in furnitures tab
+"Sports"=[list<product>];//to be called in sports tab
+"Others"=[list<product>];//to be called in others tab
+
+};
+//map
