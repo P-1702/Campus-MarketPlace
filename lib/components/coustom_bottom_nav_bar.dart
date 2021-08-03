@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/screens/Sell%20page/Sellpage_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 
@@ -53,7 +54,9 @@ class CustomBottomNavBar extends StatelessWidget {
                 child: IconButton(
                   icon: SvgPicture.asset("assets/icons/dollar.svg"),
                   // icon: Icon(Icons.money_rounded),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, SellPage.routeName);
+                  },
                 ),
               ),
               IconButton(

@@ -10,6 +10,7 @@ import 'special_offers.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -19,12 +20,9 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenWidth(10)),
             // DiscountBanner(),
             Categories(),
-<<<<<<< HEAD
             // SpecialOffers(),
             // SizedBox(height: getProportionateScreenWidth(30)),
-=======
             SizedBox(height: getProportionateScreenWidth(30)),
->>>>>>> main
             PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
           ],

@@ -10,7 +10,7 @@ class Categories extends StatelessWidget {
       {"icon": "assets/icons/Flash Icon.svg", "text": "Books"},
       {"icon": "assets/icons/Bill Icon.svg", "text": "Furntiture"},
       {"icon": "assets/icons/Game Icon.svg", "text": "Cycles"},
-      {"icon": "assets/icons/Gift Icon.svg", "text": "Sports Goods"},
+      {"icon": "assets/icons/Gift Icon.svg", "text": "Sports \nGoods"},
       {"icon": "assets/icons/Discover.svg", "text": "Electronics"},
     ];
     return Padding(
@@ -61,7 +61,7 @@ class CategoryCard extends StatelessWidget {
               child: SvgPicture.asset(icon),
             ),
             SizedBox(height: 5),
-            Text(text, textAlign: TextAlign.center)
+            FittedBox(child: Text(text, textAlign: TextAlign.center))
           ],
         ),
       ),
