@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/screens/Sell%20page/Sellpage_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 
@@ -25,7 +26,7 @@ class CustomBottomNavBar extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, -15),
             blurRadius: 20,
-            color: Color(0xFFDADADA).withOpacity(0.15),
+            color: Color(0xFFDADADA).withOpacity(0.21),
           ),
         ],
         borderRadius: BorderRadius.only(
@@ -48,24 +49,30 @@ class CustomBottomNavBar extends StatelessWidget {
                 onPressed: () =>
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
-                onPressed: () {},
+              Opacity(
+                opacity: 0.4,
+                child: IconButton(
+                  icon: SvgPicture.asset("assets/icons/dollar.svg"),
+                  // icon: Icon(Icons.money_rounded),
+                  onPressed: () {
+                    Navigator.pushNamed(context, SellPage.routeName);
+                  },
+                ),
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
                 onPressed: () {},
               ),
-              IconButton(
-                icon: SvgPicture.asset(
-                  "assets/icons/User Icon.svg",
-                  color: MenuState.profile == selectedMenu
-                      ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
-                onPressed: () =>
-                    Navigator.pushNamed(context, ProfileScreen.routeName),
-              ),
+              // IconButton(
+              //   icon: SvgPicture.asset(
+              //     "assets/icons/User Icon.svg",
+              //     color: MenuState.profile == selectedMenu
+              //         ? kPrimaryColor
+              //         : inActiveIconColor,
+              //   ),
+              //   onPressed: () =>
+              //       Navigator.pushNamed(context, ProfileScreen.routeName),
+              // ),
             ],
           )),
     );

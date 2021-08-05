@@ -4,6 +4,7 @@ import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
 
 class SellPage extends StatefulWidget {
+  static String routeName = "\sellpage";
   @override
   _SellPageState createState() => _SellPageState();
 }
